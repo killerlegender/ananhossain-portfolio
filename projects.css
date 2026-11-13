@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030008;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 4px;
+}
+
+/* PAGE FRAME */
+
+.projects-page {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 8px);
+    overflow: hidden;
+    border: 1px solid #a900ff;
+
+    /* Supplied cyberpunk image replaces the old generated background. */
+    background:
+        linear-gradient(rgba(3, 0, 12, .18), rgba(3, 0, 12, .24)),
+        url("assets/projects-background.png") center center / cover no-repeat;
+
+    border-radius: 11px;
+    box-shadow: 0 0 8px rgba(160, 0, 255, .3);
+}
+
+/* Old .projects-page::before gradient background removed. */
+
+/* NAVBAR */
+
+.navbar {
+    height: 76px;
+    width: 100%;
+    padding: 0 4%;
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(3, 0, 10, .70);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(150, 0, 255, .45);
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: #a900ff;
+    text-shadow: 0 0 12px #a000ff;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 9px 14px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    background: rgba(150, 0, 255, .2);
+}
+
+.nav-links a.active {
+    color: white;
+    background: linear-gradient(110deg, #9c00ff, #6500c9);
+    border: 1px solid #c34cff;
+    box-shadow:
+        0 0 10px #9700ff,
+        inset 0 0 8px rgba(255,255,255,.15);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.connect {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 10px 14px;
+    border: 1px solid #a900ff;
+    border-radius: 9px;
+    background: rgba(30, 0, 50, .7);
+    box-shadow: 0 0 9px rgba(160, 0, 255, .4);
+    transition: .3s;
+}
+
+.connect:hover {
+    background: #8200d9;
+    box-shadow: 0 0 20px #a000ff;
+}
+
+/* CONTENT */
+
+.projects-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px 3.5% 30px;
+}
+
+.projects-content h1 {
+    font-size: clamp(30px, 3vw, 40px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 5px;
+}
+
+.projects-content h1 span {
+    color: #bd00ff;
+    text-shadow: 0 0 15px rgba(180, 0, 255, .6);
+}
+
+.subtitle {
+    color: #d6cde0;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+/* PROJECT GRID */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* PROJECT CARD */
+
+.project-card {
+    overflow: hidden;
+    border: 1px solid rgba(153, 0, 255, .65);
+    border-radius: 14px;
+    background: linear-gradient(145deg, rgba(23, 11, 43, .86), rgba(8, 3, 16, .88));
+    box-shadow: 0 0 12px rgba(120, 0, 255, .12);
+    backdrop-filter: blur(7px);
+    transition: .3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #d000ff;
+    box-shadow: 0 0 20px rgba(170, 0, 255, .35);
+}
+
+/* PROJECT IMAGE AREA */
+
+.project-preview {
+    height: 125px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(153, 0, 255, .4);
+    background-color: #05051a;
+}
+
+/* AUTOCUT STUDIO IMAGE */
+
+.autocut-preview {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .05)),
+        url("assets/autocut-preview.png");
+
+    background-size: cover;
+    background-position: center 42%;
+    background-repeat: no-repeat;
+}
+
+/* OMNIMIND AI */
+
+.omni-preview {
+    background:
+        radial-gradient(circle at 50% 45%, #006eff55, transparent 48%),
+        linear-gradient(130deg, #001a4a, #050b30 60%, #001d3c);
+}
+
+/* ARBITRAGEX IMAGE */
+
+.arbitrage-preview {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, .05), rgba(0, 0, 0, .05)),
+        url("assets/arbitrage-preview.png");
+
+    background-size: cover;
+    background-position: center 42%;
+    background-repeat: no-repeat;
+}
+
+/* PREVIEW GLOW */
+
+.preview-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: inset 0 0 35px rgba(80, 0, 255, .2);
+}
+
+/* HIDE OLD AUTOCUT ILLUSTRATION */
+
+.autocut-preview .preview-window {
+    display: none;
+}
+
+/* OMNIMIND VISUAL */
+
+.ai-orb {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orb-ring {
+    position: absolute;
+    border: 2px solid #168bff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #006eff;
+}
+
+.ring-one {
+    width: 85px;
+    height: 85px;
+}
+
+.ring-two {
+    width: 62px;
+    height: 62px;
+    border-color: #00e5ff;
+}
+
+.orb-core {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0648aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    box-shadow: 0 0 20px #008cff;
+}
+
+.ai-panel {
+    position: absolute;
+    right: 8%;
+    top: 23%;
+    width: 55px;
+    height: 65px;
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    background: #001b3e;
+    padding: 8px;
+    box-shadow: 0 0 15px #006eff;
+}
+
+.panel-line {
+    height: 3px;
+    background: #00aaff;
+    margin-bottom: 6px;
+}
+
+.panel-line.short {
+    width: 65%;
+}
+
+.panel-box {
+    color: #00d5ff;
+    font-size: 19px;
+    text-align: center;
+}
+
+/* PROJECT INFO */
+
+.project-info {
+    min-height: 66px;
+    padding: 11px 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-info h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.project-info p {
+    font-size: 11px;
+    color: #d0c6dd;
+}
+
+/* ARROW BUTTON */
+
+.project-arrow {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    border: 1px solid #c000ff;
+    border-radius: 50%;
+    background: rgba(40, 0, 70, .8);
+    box-shadow: 0 0 10px rgba(160, 0, 255, .4);
+    transition: .3s;
+}
+
+.project-arrow:hover {
+    background: #a000ff;
+    transform: translateX(3px);
+}
+
+/* VIEW ALL BUTTON */
+
+.projects-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.view-projects {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 11px 20px;
+    border: 1px solid #d000ff;
+    border-radius: 25px;
+    background: linear-gradient(100deg, #8500ff, #c000ff);
+    box-shadow: 0 0 10px #9e00ff, 0 0 23px rgba(150, 0, 255, .45);
+    transition: .3s;
+}
+
+.view-projects:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #bd00ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 2%;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links a {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: auto;
+        min-height: 90px;
+        padding: 10px 14px 35px;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        bottom: 5px;
+        justify-content: space-around;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        padding: 5px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .projects-content {
+        padding: 35px 18px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .project-preview {
+        height: 155px;
+    }
+}
+
+

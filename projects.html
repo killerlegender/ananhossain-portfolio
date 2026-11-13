@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Anan Hossain</title>
+
+    <link rel="stylesheet" href="projects.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="projects-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">A<span>H</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="socials.html">Socials</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle">☾</button>
+
+            <a href="socials.html" class="connect">
+                Let's Connect <span>→</span>
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- PROJECTS SECTION -->
+    <main class="projects-content">
+
+        <h1>My <span>Projects</span></h1>
+
+        <p class="subtitle">Ideas turned into reality</p>
+
+
+        <section class="projects-grid">
+
+            <!-- AUTOCUT STUDIO -->
+            <article class="project-card">
+
+                <div class="project-preview autocut-preview">
+                    <div class="preview-window">
+                        <div class="window-top">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="editing-screen">
+                            <div class="video-frame">
+                                <span>▶</span>
+                            </div>
+                            <div class="timeline">
+                                <i></i><i></i><i></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-glow"></div>
+                </div>
+
+                <div class="project-info">
+                    <div>
+                        <h2>AutoCut Studio</h2>
+                        <p>AI-Powered Video Editor & Cutter</p>
+                    </div>
+
+                    <a href="#" class="project-arrow" aria-label="View AutoCut Studio">→</a>
+                </div>
+
+            </article>
+
+
+            <!-- OMNIMIND AI -->
+            <article class="project-card">
+
+                <div class="project-preview omni-preview">
+                    <div class="ai-orb">
+                        <div class="orb-ring ring-one"></div>
+                        <div class="orb-ring ring-two"></div>
+                        <div class="orb-core">AI</div>
+                    </div>
+
+                    <div class="ai-panel">
+                        <div class="panel-line"></div>
+                        <div class="panel-line short"></div>
+                        <div class="panel-box">✦</div>
+                    </div>
+
+                    <div class="preview-glow"></div>
+                </div>
+
+                <div class="project-info">
+                    <div>
+                        <h2>OmniMind AI</h2>
+                        <p>Your All-in-One AI Assistant</p>
+                    </div>
+
+                    <a href="#" class="project-arrow" aria-label="View OmniMind AI">→</a>
+                </div>
+
+            </article>
+
+
+            <!-- ARBITRAGEX -->
+            <article class="project-card">
+
+                <div class="project-preview arbitrage-preview">
+
+                    <div class="chart-area">
+                        <div class="chart-label">MARKET ANALYTICS</div>
+
+                        <div class="chart-bars">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="chart-trend">↗</div>
+                    </div>
+
+                    <div class="preview-glow"></div>
+                </div>
+
+                <div class="project-info">
+                    <div>
+                        <h2>ArbitrageX</h2>
+                        <p>Smart Price Arbitrage Tracker</p>
+                    </div>
+
+                    <a href="#" class="project-arrow" aria-label="View ArbitrageX">→</a>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- VIEW ALL BUTTON -->
+        <div class="projects-action">
+            <a href="#all-projects" class="view-projects">
+                View All Projects <span>→</span>
+            </a>
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        themeToggle.textContent =
+            document.body.classList.contains("light-mode")
+            ? "☀" : "☾";
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,798 @@
+
+/* =========================================
+   GLOBAL SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #030208;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+
+    padding: 0 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 20;
+
+    background: #080410;
+
+    border: 1px solid rgba(185, 0, 255, 0.7);
+    border-radius: 10px;
+}
+
+
+/* Logo */
+
+.logo {
+    color: white;
+    font-size: 29px;
+    font-weight: 900;
+    letter-spacing: -3px;
+    text-decoration: none;
+
+    text-shadow: 0 0 15px #a000ff;
+}
+
+.logo span {
+    color: #c000ff;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    color: #e5ddeb;
+    text-decoration: none;
+    font-size: 12px;
+
+    padding: 9px 13px;
+    border-radius: 20px;
+
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+
+    background: linear-gradient(
+        100deg,
+        #7100dc,
+        #b000ff
+    );
+
+    box-shadow: 0 0 15px rgba(165, 0, 255, 0.75);
+}
+
+
+/* Navbar right side */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-button {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.connect-button {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+
+    padding: 9px 13px;
+
+    border: 1px solid #a900ff;
+    border-radius: 8px;
+
+    box-shadow: 0 0 10px rgba(155, 0, 255, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.connect-button:hover {
+    background: #7900c9;
+    box-shadow: 0 0 18px #9900ff;
+}
+
+.connect-button span {
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   HOME HERO SECTION
+========================================= */
+
+.home-hero {
+    width: 100%;
+
+    height: calc(100vh - 70px);
+    min-height: 650px;
+    max-height: 850px;
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 5.5%;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 48%,
+            rgba(100, 0, 220, 0.28),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            ellipse at 50% 100%,
+            rgba(100, 0, 200, 0.2),
+            transparent 50%
+        ),
+
+        #05020d;
+
+    border: 1px solid rgba(190, 0, 255, 0.8);
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   PURPLE BACKGROUND LIGHT
+========================================= */
+
+.hero-glow {
+    position: absolute;
+    z-index: -1;
+
+    width: 550px;
+    height: 550px;
+
+    right: 8%;
+    top: 0;
+
+    border-radius: 50%;
+
+    background: rgba(111, 0, 255, 0.22);
+
+    filter: blur(100px);
+}
+
+
+/* =========================================
+   FUTURISTIC CITY SKYLINE
+========================================= */
+
+.city-skyline {
+    position: absolute;
+    z-index: -1;
+
+    bottom: 65px;
+    left: 0;
+
+    width: 100%;
+    height: 245px;
+
+    opacity: 0.85;
+
+    background:
+
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 16px,
+            rgba(150, 0, 255, 0.23) 17px 19px,
+            transparent 20px 38px
+        ),
+
+        linear-gradient(
+            to top,
+            rgba(108, 0, 255, 0.3),
+            transparent 80%
+        );
+
+    clip-path: polygon(
+        0 45%,
+        4% 45%,
+        4% 17%,
+        7% 17%,
+        7% 52%,
+        10% 52%,
+        10% 30%,
+        14% 30%,
+        14% 60%,
+        17% 60%,
+        17% 10%,
+        21% 10%,
+        21% 48%,
+        25% 48%,
+        25% 25%,
+        29% 25%,
+        29% 55%,
+        33% 55%,
+        33% 15%,
+        37% 15%,
+        37% 48%,
+        41% 48%,
+        41% 5%,
+        45% 5%,
+        45% 55%,
+        49% 55%,
+        49% 25%,
+        53% 25%,
+        53% 50%,
+        57% 50%,
+        57% 13%,
+        61% 13%,
+        61% 52%,
+        65% 52%,
+        65% 22%,
+        69% 22%,
+        69% 45%,
+        73% 45%,
+        73% 8%,
+        77% 8%,
+        77% 55%,
+        81% 55%,
+        81% 23%,
+        85% 23%,
+        85% 52%,
+        89% 52%,
+        89% 13%,
+        93% 13%,
+        93% 48%,
+        97% 48%,
+        97% 25%,
+        100% 25%,
+        100% 100%,
+        0 100%
+    );
+}
+
+
+/* Ground lighting */
+
+.city-floor {
+    position: absolute;
+    z-index: -1;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100px;
+
+    background: linear-gradient(
+        to top,
+        rgba(105, 0, 220, 0.25),
+        transparent
+    );
+
+    border-bottom: 2px solid rgba(155, 0, 255, 0.35);
+}
+
+
+/* =========================================
+   HERO INTRODUCTION
+========================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: 52%;
+    margin-bottom: 70px;
+}
+
+.hero-greeting {
+    color: #ef20ff;
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.hero-content h1 {
+    color: white;
+
+    font-size: clamp(48px, 5.1vw, 76px);
+    font-weight: 800;
+
+    letter-spacing: -3px;
+    line-height: 1.12;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(
+        90deg,
+        #d000ff,
+        #a66bff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+/* Job roles */
+
+.hero-roles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 12px;
+    margin-top: 13px;
+
+    color: #f0e8f8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-roles i {
+    color: #e000ff;
+    font-style: normal;
+}
+
+
+/* Description */
+
+.hero-description {
+    max-width: 440px;
+
+    margin-top: 18px;
+
+    color: #ded5e8;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Explore button */
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 25px;
+    padding: 13px 19px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    border: 1px solid #e5a0ff;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        100deg,
+        #7900ff,
+        #d000ff
+    );
+
+    box-shadow:
+        0 0 12px rgba(174, 0, 255, 0.75),
+        0 0 28px rgba(130, 0, 255, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #a000ff;
+}
+
+.hero-button span:first-child {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   PORTRAIT AND NEON RING
+========================================= */
+
+.hero-portrait-area {
+    position: absolute;
+    z-index: 3;
+
+    right: 6%;
+    bottom: 65px;
+
+    width: 44%;
+    height: 88%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+/* Neon ring */
+
+.portrait-halo {
+    position: absolute;
+    z-index: 0;
+
+    width: 330px;
+    height: 330px;
+
+    top: 15%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border: 2px solid #d000ff;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px #c000ff,
+        0 0 28px #9500ff,
+        0 0 65px rgba(133, 0, 255, 0.65);
+}
+
+
+/* Portrait image */
+
+.portrait-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(350px, 75%);
+    aspect-ratio: 1;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    border: 2px solid rgba(220, 0, 255, 0.9);
+
+    box-shadow:
+        0 0 15px #b000ff,
+        0 0 45px rgba(145, 0, 255, 0.6);
+}
+
+.portrait-container img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* Floating code */
+
+.floating-code {
+    position: absolute;
+    z-index: 4;
+
+    right: 4%;
+    bottom: 32%;
+
+    color: white;
+    font-size: 28px;
+
+    text-shadow:
+        0 0 10px #bd00ff,
+        0 0 25px #a000ff;
+}
+
+
+/* =========================================
+   STATISTICS CARDS
+========================================= */
+
+.hero-stats {
+    position: absolute;
+    z-index: 6;
+
+    left: 5.5%;
+    bottom: 20px;
+
+    width: 89%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.stat-card {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 10px 18px;
+
+    background: rgba(9, 3, 20, 0.92);
+
+    border: 1px solid rgba(145, 0, 210, 0.55);
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #d000ff;
+
+    box-shadow:
+        0 0 18px rgba(155, 0, 255, 0.3);
+
+    transform: translateY(-3px);
+}
+
+
+/* Statistics icons */
+
+.stat-icon {
+    color: #c000ff;
+    font-size: 27px;
+
+    filter: drop-shadow(0 0 8px #a000ff);
+}
+
+.trophy-icon {
+    filter: drop-shadow(0 0 8px #ff9d00);
+}
+
+
+/* Statistics text */
+
+.stat-info h3 {
+    color: white;
+    font-size: 21px;
+    margin-bottom: 2px;
+}
+
+.stat-info p {
+    color: #d7cce1;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+
+    .hero-content {
+        width: 58%;
+    }
+
+    .hero-portrait-area {
+        right: 3%;
+        width: 42%;
+    }
+
+    .portrait-container {
+        width: 280px;
+    }
+
+    .portrait-halo {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: auto;
+        min-height: 65px;
+
+        flex-wrap: wrap;
+        gap: 12px;
+
+        padding: 12px 5%;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .home-hero {
+        height: auto;
+        min-height: 1050px;
+
+        padding: 55px 6%;
+
+        align-items: flex-start;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 46px;
+    }
+
+    .hero-roles {
+        gap: 7px;
+        font-size: 11px;
+    }
+
+    .hero-portrait-area {
+        width: 100%;
+        height: 430px;
+
+        right: 0;
+        bottom: 180px;
+    }
+
+    .portrait-container {
+        width: 255px;
+    }
+
+    .portrait-halo {
+        width: 280px;
+        height: 280px;
+        top: 10%;
+    }
+
+    .hero-stats {
+        left: 5%;
+        width: 90%;
+
+        bottom: 15px;
+
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .stat-card {
+        min-height: 55px;
+    }
+
+    .floating-code {
+        right: 15%;
+    }
+
+
+}
+
+
+/* =====================================================
+   ANAN PORTFOLIO — CYBERPUNK BACKGROUND UPDATE
+   Paste this at the VERY BOTTOM of the root style.css.
+   Keep cyberpunk-background.png inside the assets folder.
+===================================================== */
+
+.home-hero {
+    background:
+        linear-gradient(rgba(3, 2, 12, 0.22), rgba(3, 2, 12, 0.28)),
+        url("assets/cyberpunk-background.png") center center / cover no-repeat;
+}
+
+/* Remove old decorative shapes and the portrait area. */
+.hero-glow,
+.city-skyline,
+.city-floor,
+.hero-portrait-area,
+.portrait-halo,
+.portrait-container,
+.floating-code {
+    display: none !important;
+}
+
+/* Keep the text readable over the new background. */
+.hero-content {
+    width: min(58%, 650px);
+    margin-bottom: 0;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Slightly transparent navigation and statistic cards. */
+.navbar {
+    background: rgba(5, 2, 16, 0.72);
+    backdrop-filter: blur(10px);
+}
+
+.stat-card {
+    background: rgba(5, 2, 16, 0.72);
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        width: 65%;
+    }
+}
+
+@media (max-width: 650px) {
+    .home-hero {
+        background-position: 58% center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+

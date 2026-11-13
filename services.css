@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #030008;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 4px;
+}
+
+/* PAGE FRAME */
+
+.services-page {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 8px);
+    overflow: hidden;
+
+    border: 1px solid #a900ff;
+    border-radius: 11px;
+
+    /* Supplied cyberpunk image replaces the old generated background. */
+    background:
+        linear-gradient(rgba(3, 0, 12, .18), rgba(3, 0, 12, .24)),
+        url("assets/services-background.png") center center / cover no-repeat;
+
+    box-shadow: 0 0 8px rgba(160, 0, 255, .3);
+}
+
+/* Old .services-page::before purple gradient/circuit overlay removed. */
+
+/* NAVBAR */
+
+.navbar {
+    height: 76px;
+    width: 100%;
+    padding: 0 4%;
+
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(3, 0, 10, .70);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(150, 0, 255, .45);
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -3px;
+
+    color: #a900ff;
+    text-shadow: 0 0 12px #a000ff;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+
+    padding: 9px 14px;
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    background: rgba(150, 0, 255, .2);
+}
+
+.nav-links a.active {
+    color: white;
+
+    background: linear-gradient(
+        110deg,
+        #9c00ff,
+        #6500c9
+    );
+
+    border: 1px solid #c34cff;
+
+    box-shadow:
+        0 0 10px #9700ff,
+        inset 0 0 8px rgba(255,255,255,.15);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.connect {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+
+    padding: 10px 14px;
+
+    border: 1px solid #a900ff;
+    border-radius: 9px;
+
+    background: rgba(30, 0, 50, .7);
+    box-shadow: 0 0 9px rgba(160, 0, 255, .4);
+
+    transition: .3s;
+}
+
+.connect:hover {
+    background: #8200d9;
+    box-shadow: 0 0 20px #a000ff;
+}
+
+/* SERVICES CONTENT */
+
+.services-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 25px 3.5% 35px;
+}
+
+.services-content h1 {
+    font-size: clamp(32px, 3vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 5px;
+}
+
+.services-content h1 span {
+    color: #bd00ff;
+    text-shadow: 0 0 15px rgba(180, 0, 255, .6);
+}
+
+.subtitle {
+    color: #e2dce9;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+/* SERVICES GRID */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* SERVICE CARDS */
+
+.service-card {
+    min-height: 205px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px 12px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(23, 9, 42, .82),
+        rgba(8, 3, 18, .86)
+    );
+
+    border: 1px solid rgba(153, 0, 255, .55);
+    border-radius: 15px;
+
+    box-shadow:
+        inset 0 0 15px rgba(130, 0, 255, .07),
+        0 0 10px rgba(120, 0, 255, .12);
+
+    backdrop-filter: blur(8px);
+    transition: .3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d000ff;
+
+    box-shadow:
+        0 0 15px rgba(170, 0, 255, .55),
+        0 0 30px rgba(130, 0, 255, .2),
+        inset 0 0 20px rgba(150, 0, 255, .15);
+}
+
+/* SERVICE ICONS */
+
+.service-icon {
+    height: 55px;
+    width: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+
+    color: #c000ff;
+    font-size: 39px;
+    font-weight: 800;
+
+    text-shadow:
+        0 0 8px #a000ff,
+        0 0 20px #9200ff,
+        0 0 35px #7900ff;
+}
+
+.code-icon {
+    font-size: 29px;
+    border: 2px solid #9c00ff;
+    border-radius: 9px;
+    width: 48px;
+    height: 40px;
+    box-shadow: 0 0 15px #8200ff;
+}
+
+.gear-icon {
+    font-size: 49px;
+}
+
+.robot-icon {
+    font-size: 46px;
+}
+
+.design-icon {
+    font-size: 43px;
+}
+
+/* SERVICE TEXT */
+
+.service-card h2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.service-card p {
+    color: #d0c6dd;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+/* GET IN TOUCH BUTTON */
+
+.services-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.get-in-touch {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    text-decoration: none;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    padding: 12px 23px;
+
+    border: 1px solid #d000ff;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        100deg,
+        #8500ff,
+        #c000ff
+    );
+
+    box-shadow:
+        0 0 10px #9e00ff,
+        0 0 23px rgba(150, 0, 255, .45);
+
+    transition: .3s;
+}
+
+.get-in-touch:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px #bd00ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 2%;
+    }
+
+    .nav-links {
+        gap: 4px;
+    }
+
+    .nav-links a {
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        min-height: 90px;
+        padding: 10px 14px 35px;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        bottom: 5px;
+        justify-content: space-around;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+        padding: 5px;
+    }
+
+    .nav-right {
+        gap: 8px;
+    }
+
+    .services-content {
+        padding: 35px 18px;
+    }
+
+    .services-content h1 {
+        font-size: 34px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        min-height: 180px;
+    }
+}
+

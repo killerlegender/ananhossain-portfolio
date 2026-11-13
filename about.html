@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Anan Hossain</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="about-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">A<span>H</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="socials.html">Socials</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle">☾</button>
+            <a href="socials.html" class="connect">
+                Let's Connect <span>→</span>
+            </a>
+        </div>
+
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <main class="about-hero">
+
+        <div class="about-content">
+
+            <h1>About <span>Me</span></h1>
+
+            <div class="about-description">
+
+                <p>
+                    I'm Anan Hossain, a passionate developer
+                    and creative designer from Dhaka, Bangladesh.
+                    I started my journey in technology in 2023, driven
+                    by curiosity and a passion for creating things.
+                </p>
+
+                <p>
+                    I enjoy developing software, designing digital
+                    experiences, exploring new technologies, and
+                    building ideas into reality.
+                </p>
+
+                <p>
+                    I believe in continuous learning, creative problem-solving,
+                    and turning innovative ideas into meaningful projects.
+                </p>
+
+            </div>
+
+            <a href="index.html" class="know-more">
+                Know More About Me <span>→</span>
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        themeToggle.textContent =
+            document.body.classList.contains("light-mode")
+            ? "☀" : "☾";
+    });
+</script>
+
+</body>
+</html>
+
+
+

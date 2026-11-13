@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services | Anan Hossain</title>
+
+    <link rel="stylesheet" href="services.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="services-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">A<span>H</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="socials.html">Socials</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle">☾</button>
+
+            <a href="socials.html" class="connect">
+                Let's Connect <span>→</span>
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- SERVICES CONTENT -->
+    <main class="services-content">
+
+        <h1>My <span>Services</span></h1>
+
+        <p class="subtitle">What I Offer</p>
+
+        <section class="services-grid">
+
+            <!-- WEB DEVELOPMENT -->
+            <div class="service-card">
+
+                <div class="service-icon code-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h2>Web Development</h2>
+
+                <p>
+                    Modern and fast websites
+                    <br>
+                    with clean code.
+                </p>
+
+            </div>
+
+
+            <!-- SOFTWARE SOLUTIONS -->
+            <div class="service-card">
+
+                <div class="service-icon gear-icon">
+                    ⚙
+                </div>
+
+                <h2>Software Solutions</h2>
+
+                <p>
+                    Custom software for
+                    <br>
+                    your needs.
+                </p>
+
+            </div>
+
+
+            <!-- AUTOMATION -->
+            <div class="service-card">
+
+                <div class="service-icon robot-icon">
+                    ♟
+                </div>
+
+                <h2>Automation Projects</h2>
+
+                <p>
+                    Smart solutions to
+                    <br>
+                    save time.
+                </p>
+
+            </div>
+
+
+            <!-- UI UX DESIGN -->
+            <div class="service-card">
+
+                <div class="service-icon design-icon">
+                    🎨
+                </div>
+
+                <h2>UI/UX Design</h2>
+
+                <p>
+                    Beautiful and user-friendly
+                    <br>
+                    designs.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT BUTTON -->
+        <div class="services-action">
+
+            <a href="socials.html" class="get-in-touch">
+                Get in Touch <span>→</span>
+            </a>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script>
+    const themeToggle = document.getElementById("themeToggle");
+
+    themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        themeToggle.textContent =
+            document.body.classList.contains("light-mode")
+            ? "☀" : "☾";
+    });
+</script>
+
+</body>
+</html>
